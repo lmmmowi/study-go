@@ -20,10 +20,10 @@ func FileInput() {
 	reader := bufio.NewReader(inputFile)
 	for {
 		s, readError := reader.ReadString('\n')
+		fmt.Print(s)
 		if readError == io.EOF {
 			break
 		}
-		fmt.Print(s)
 	}
 
 	// by Read
