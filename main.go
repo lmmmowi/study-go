@@ -12,5 +12,7 @@ func main() {
 	//io.RunCat()
 	//io.RunCat2()
 	//io.HandleJson()
-	goroutine.Sleep()
+	//goroutine.Sleep()
+	//goroutine.Channel()
+	goroutine.GetPrimes()
 }
