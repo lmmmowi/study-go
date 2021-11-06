@@ -1,6 +1,8 @@
 package main
 
-import "./io"
+import (
+	"./goroutine"
+)
 
 func main() {
 	//io.ReadInput()
@@ -9,5 +11,6 @@ func main() {
 	//io.HandleArg()
 	//io.RunCat()
 	//io.RunCat2()
-	io.HandleJson()
+	//io.HandleJson()
+	goroutine.Sleep()
 }
