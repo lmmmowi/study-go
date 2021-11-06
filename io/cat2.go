@@ -1,34 +1,33 @@
 package io
 
 import (
-	"bufio"
 	"flag"
-	"fmt"
-	"io"
 	"os"
 )
 
-func RunCat() {
+func RunCat2() {
 	flag.Parse()
 
 	if flag.NArg() == 0 {
-		cat(bufio.NewReader(os.Stdin))
+		cat2(os.Stdin)
 	} else {
 		for i := 0; i < flag.NArg(); i++ {
 			f, err := os.Open(flag.Arg(i))
 			if err == nil {
-				cat(bufio.NewReader(f))
+				cat2(f)
 			}
 			f.Close()
 		}
 	}
 }
 
-func cat(reader *bufio.Reader) {
+func cat2(file *os.File) {
+	buf := make([]byte, 512)
 	for {
-		s, err := reader.ReadString('\n')
-		fmt.Println(s)
-		if err == io.EOF {
+		rn, _ := file.Read(buf)
+		if rn > 0 {
+			os.Stdout.Write(buf[0:rn])
+		} else if rn == 0 {
 			break
 		}
 	}

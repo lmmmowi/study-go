@@ -7,5 +7,6 @@ func main() {
 	//io.FileInput()
 	//io.FileCopy()
 	//io.HandleArg()
-	io.RunCat()
+	//io.RunCat()
+	io.RunCat2()
 }
