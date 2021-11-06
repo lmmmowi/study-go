@@ -8,5 +8,6 @@ func main() {
 	//io.FileCopy()
 	//io.HandleArg()
 	//io.RunCat()
-	io.RunCat2()
+	//io.RunCat2()
+	io.HandleJson()
 }
