@@ -14,5 +14,7 @@ func main() {
 	//io.HandleJson()
 	//goroutine.Sleep()
 	//goroutine.Channel()
-	goroutine.GetPrimes()
+	//goroutine.GetPrimes()
+	//goroutine.CloseChannel()
+	goroutine.Select()
 }
